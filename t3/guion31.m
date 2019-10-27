@@ -23,5 +23,3 @@ computer
 
 % devuelve información sobre la versión de Matlab
 ver
-
-% GUIÓN 03.2 ESTRUCTURAS DE DATOS EN MATLAB
