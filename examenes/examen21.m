@@ -12,3 +12,11 @@ figure, subplot(2,2,1), imshow(I), title('Imagen original')
 subplot(2,2,2), imshow(I_neg), title('Imagen modificada')
 subplot(2,2,3), plot(tr), title('Transformación'), axis tight, axis square 
 subplot(2,2,4), imshow(I_diff), title('Diferencia')
+
+%% Ejercicio 2
+I = imread('eight.tif');
+figure, subplot(2,2,1), imshow(I), title('Imagen original')
+subplot(2,2,2), imhist(I), title('Histograma original')
+I_eq = histeq(I,256);
+subplot(2,2,3), imshow(I_eq), title('Imagen ecualizada')
+subplot(2,2,4), imhist(I_eq), title('Histograma ecualizado')
