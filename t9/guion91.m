@@ -1,4 +1,4 @@
-% GUIÓN 7.1 Cropping, Resizing, Flipping y Rotación
+% GUIÓN 9.1 Histograma de una imagen
 
 %% Paso 1
 % Muestra una imagen y su histograma
@@ -68,7 +68,3 @@ axis tight, title('Diagrama Normalizado')
 figure, subplot(1,2,1), plot(c), axis auto, title('Gráfico')
 subplot(1,2,2), plot(c_norm), axis auto,
 title('Gráfico Normalizado')
-
-
-
-
