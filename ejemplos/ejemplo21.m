@@ -1,4 +1,4 @@
-% EXAMEN 1
+% EJEMPLO 1
 %% Ejercicio 1
 % Lee la imagen moon.tif y realiza una transformación negativa de la misma.
 % Comprueba que obtenemos el mismo resultado si usamos la función complemento.
@@ -38,3 +38,11 @@ I_new3 = imfilter(I,fn_gau);
 figure
 subplot(1,2,1), imshow(I), title('Imagen original');
 subplot(1,2,2), imshow(I_new3), title('Filtro Gaussiano');
+
+%% Ejercicio 5
+I = imread('cameraman.tif');
+Id = im2double(I);
+ft = fft2(Id);
+ft_shift = fftshift(ft);
+figure, subplot(1,2,1), imshow(abs(ft_shift),[]), title('mapeado directo');
+subplot(1,2,2), imshow(log(1 + abs(ft_shift)),[]), title('Remap logaritmico');

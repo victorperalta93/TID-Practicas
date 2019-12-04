@@ -1,4 +1,4 @@
-% EXAMEN 2
+% EJEMPLO 2
 %% Ejercicio 1
 x = 0:255; c= 255 / log(256);
 y = c*log(x+1);
