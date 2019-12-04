@@ -20,3 +20,21 @@ subplot(2,2,2), imhist(I), title('Histograma original')
 I_eq = histeq(I,256);
 subplot(2,2,3), imshow(I_eq), title('Imagen ecualizada')
 subplot(2,2,4), imhist(I_eq), title('Histograma ecualizado')
+
+%% Ejercicio 3
+a = [0 0 0 1 0 0 0]
+f = [1 2 3 4 5]
+g = imfilter(a,f,'full','conv')
+% same indica que el vector de salida sea del mismo tamaño que el de
+% entrada
+% full indica que la salida sea el vector filtrado completo, por tanto
+% mayor en tamaño que la entrada
+
+%% Ejercicio 4
+fn_gau = fspecial('gaussian',9,1.5);
+figure, bar3(fn_gau,'b'), title('Filtro Gaussiano como gráfico 3D');
+I = imread('cameraman.tif');
+I_new3 = imfilter(I,fn_gau);
+figure
+subplot(1,2,1), imshow(I), title('Imagen original');
+subplot(1,2,2), imshow(I_new3), title('Filtro Gaussiano');
