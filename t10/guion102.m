@@ -27,7 +27,7 @@ subplot(1,2,2), imshow(I_new2), title('Media no uniforme');
 %% Paso 6
 % Crea un filtro guassiano y muestra el núcleo usando un gráfico 3D
 fn_gau = fspecial('gaussian',9,1.5);
-figure, bar3(fn_gau,'b'), title('Filtro Gaussiano como gráfico 3D');
+figure, bar3(fn_gau), title('Filtro Gaussiano como gráfico 3D');
 
 %% Paso 7
 % Filtra la imagen cameraman.tif usando la máscara gaussiana
