@@ -55,3 +55,12 @@ I2 = imnoise(I,'gaussian');
 I_prwt2 = edge(I2,'prewitt');
 subplot(2,2,3), imshow(I2), title('Imagen ruidosa');
 subplot(2,2,4), imshow(I_prwt2), title('Bordes extraidos de ruidosa');
+
+%% Ejercicio 4
+I = imread('coins.png');
+figure
+subplot(1,2,1), imhist(I);
+
+T = 85; 
+I_thresh = imbinarize(I,( T / 255));
+subplot(1,2,2), imshow(I_thresh), title('Imagen Umbralizada');
