@@ -45,3 +45,13 @@ max(abs(Ib(:)-IbporFourier(:)))
 figure; imshow(Ib)
 
 %% Ejercicio 3
+I = imread('lenna.tif');
+I_prwt = edge(I,'prewitt');
+figure
+subplot(2,2,1), imshow(I), title('Imagen Original');
+subplot(2,2,2), imshow(I_prwt), title('Bordes extraidos');
+
+I2 = imnoise(I,'gaussian');
+I_prwt2 = edge(I2,'prewitt');
+subplot(2,2,3), imshow(I2), title('Imagen ruidosa');
+subplot(2,2,4), imshow(I_prwt2), title('Bordes extraidos de ruidosa');
