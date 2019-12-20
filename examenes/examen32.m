@@ -56,3 +56,15 @@ end
 
 % Muestra la imagen para detectar esquinas
 figure; imshow(I_esq,[]); impixelinfo
+
+%% Ejercicio 3
+I = imread('lenna.tif');
+br = edge(I,'sobel');
+figure
+subplot(2,2,1), imshow(I), title('Imagen original');
+subplot(2,2,2), imshow(br), title('Bordes extraidos con Sobel');
+
+Ir = imnoise(I,'gaussian');
+brr = edge(Ir,'sobel');
+subplot(2,2,3), imshow(Ir), title('Imagen ruidosa');
+subplot(2,2,4), imshow(brr), title('Bordes extraidos de imagen ruidosa');
