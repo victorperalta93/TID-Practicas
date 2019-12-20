@@ -68,3 +68,10 @@ Ir = imnoise(I,'gaussian');
 brr = edge(Ir,'sobel');
 subplot(2,2,3), imshow(Ir), title('Imagen ruidosa');
 subplot(2,2,4), imshow(brr), title('Bordes extraidos de imagen ruidosa');
+
+%% Ejercicio 4
+I = imread('coins.png');
+Ih = imbinarize(I);
+figure
+subplot(1,2,1), imhist(I), title('Histograma');
+subplot(1,2,2), imshow(Ih), title('Imagen umbralizada');
