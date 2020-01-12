@@ -41,9 +41,7 @@ targetFrame = fread(fid,[frameHeight,frameWidth]);
 targetFrame = targetFrame'; 
 fclose(fid);
 % Ejecuta   la   función   ebmn.
-tic 
 [predictedFrame_Full, mv_d, mv_o] = ebma(targetFrame, anchorFrame, blockSize, p, accuracy);
-time_full = toc;
 % Muestra   los fotogramas de anclado y objetivo. 
 figure 
 subplot(1,2,1), imshow(uint8(anchorFrame)), title('Anchor Frame'); 
